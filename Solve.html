@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Coder Foundry MiniSite Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+        <div class="container">
+            <a class="navbar-brand" href="/Index.html">Challenge Name Here</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+
+                        <a class="nav-link" href="/Index.html">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/Solve.html">Solve</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Code.html">Code</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Git</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Blog Post/YouTube Explanation</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1 class="mt-5">The Exercise</h1>
+                <p class="lead">This page will display your JS exercise</p>
+                <ul class="list-unstyled">
+                    <li>The Javascript Exercise</li>
+                    <li>Is placed on this page</li>
+                </ul>
+            </div>
+        </div>
+
+
+        <hr />
+
+        <div class="row">
+            <div class="col">
+                <input id="txtFizzBuzzIn1" />
+            </div>
+            <div class="col">
+                <input id="txtFizzBuzzIn2" />
+            </div>
+            <div class="col">
+                <button id="btnFizzBuzz" class="btn btn-dark">Click Me</button>
+            </div>
+            <a href="" data-toggle="modal" data-target="#exampleModal">Show loop iterations</a>
+        </div>
+        <div class="row">
+            <p id="pFizzBuzzOut"></p>
+        </div>
+
+       </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="inner"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    <!-- Bootstrap core JavaScript -->
+    <script src="//code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <!--my custom and any script tags-->
+    <script>
+
+        //wire up a event handler for the click event of btnfizzbuzz
+        document.getElementById("btnFizzBuzz").addEventListener("click", function () {
+
+            //number("3)==>3
+            //number("3 f")==> NaN
+
+            //parseInt("3")==>3
+            //parseInt("3 f")==>3
+            //parseInt("f 3")==>NaN
+
+            //Step 1: get user data
+            let fizz = Number(document.getElementById("txtFizzBuzzIn1").value);  //3
+            let buzz = Number(document.getElementById("txtFizzBuzzIn2").value); //5
+
+
+
+
+            //Step 2: run user data
+            let output = DoFizzBuzzFoundation(fizz, buzz);
+
+
+
+            //Step 3: output results
+            document.getElementById("pFizzBuzzOut").innerHTML = output;
+
+        });
+
+
+        //Algo placeholder- a named function
+        function DoFizzBuzzFoundation(fizz, buzz) {
+            let output = "";
+            let output2 = "";
+
+            for (let loop = 1; loop <= 100; loop++) {
+                let fizzRemainder = loop % fizz;
+                let buzzRemainder = loop % buzz;
+
+                if (fizzRemainder == 0 && buzzRemainder == 0) { output += `<div class="btn btn-danger">FIZZBUZZ </div><br />`; }
+                else if (fizzRemainder == 0) { output += `<div style="color:red">FIZZ </div><br />`; }
+                else if (buzzRemainder == 0) { output += `<div class="btn btn-warning">BUZZ </div><br />`; }
+                else { output += `${loop} <br />`; }
+      
+
+                output2 += `loop value: ${loop} <br /> FR: ${loop} % ${fizz} = ${fizzRemainder} <br /> BR: ${loop} % ${buzz} = ${buzzRemainder} <br /><br />`;
+            }
+            let result2 = document.getElementById("inner");
+            result2.innerHTML = output2;
+
+            return output;
+        }
+        //1 % 3 == 1
+        //2 $ 3 == 2
+        //3 % 3 == 0
+        //4 % 3 == 1
+        //5 % 3 == 2
+        //6 % 3 == 0
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+</body>
+
+</html>
