@@ -20,7 +20,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
         <div class="container">
-            <a class="navbar-brand" href="/Index.html">Challenge Name Here</a>
+            <a class="navbar-brand" href="/Index.html">The FizzBuzz Challenge</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -39,13 +39,10 @@
                         <a class="nav-link" href="/Code.html">Code</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Git</a>
+                        <a class="nav-link" href="https://github.com/jonesethan91">Git</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Blog Post/YouTube Explanation</a>
+                        <a class="nav-link" href="https://ethan-jones-dragon.netlify.app/">Portfolio</a>
                     </li>
                 </ul>
             </div>
@@ -56,8 +53,8 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h1 class="mt-5">The Exercise</h1>
-                <p class="lead">This page will display your JS exercise</p>
+                <h1 class="mt-5">See for yourself what FizzBuzz does!</h1>
+                <p class="lead">Below, you can input numbers into the correct fields and watch what happens!</p>
                 <ul class="list-unstyled">
                     <li>The Javascript Exercise</li>
                     <li>Is placed on this page</li>
@@ -76,9 +73,9 @@
                 <input id="txtFizzBuzzIn2" />
             </div>
             <div class="col">
-                <button id="btnFizzBuzz" class="btn btn-dark">Click Me</button>
+                <button id="btnFizzBuzz" class="btn btn-primary">NANI!?</button>
             </div>
-            <a href="" data-toggle="modal" data-target="#exampleModal">Show loop iterations</a>
+            <a href="" data-toggle="modal" data-target="#exampleModal">Show Loop Iterations</a>
         </div>
         <div class="row">
             <p id="pFizzBuzzOut"></p>
@@ -89,7 +86,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <h2 class="modal-title" id="exampleModalLabel">The Iterations!</h2>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -157,7 +154,7 @@
                 let buzzRemainder = loop % buzz;
 
                 if (fizzRemainder == 0 && buzzRemainder == 0) { output += `<div class="btn btn-danger">FIZZBUZZ </div><br />`; }
-                else if (fizzRemainder == 0) { output += `<div style="color:red">FIZZ </div><br />`; }
+                else if (fizzRemainder == 0) { output += `<div class="btn btn-success">FIZZ </div><br />`; }
                 else if (buzzRemainder == 0) { output += `<div class="btn btn-warning">BUZZ </div><br />`; }
                 else { output += `${loop} <br />`; }
       
